@@ -1,0 +1,22 @@
+{
+    "name": "yubarajshrestha/ym",
+    "type": "library",
+    "description": "An awesome package to modularize your laravel app.",
+    "keywords": ["laravel", "ym", "laravel-module"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yubaraj Shrestha",
+            "email": "companion.krish@outlook.com",
+            "role": "Software Engineer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "YubarajShrestha\\YM\\": "src/",
+            "YModules\\": "YModules/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
