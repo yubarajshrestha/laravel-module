@@ -1,4 +1,11 @@
 # Modularizing Laravel
+====================
+[![Latest Stable Version](https://poser.pugx.org/yubarajshrestha/ym/v/stable)](https://packagist.org/packages/yubarajshrestha/ym)
+[![Total Downloads](https://poser.pugx.org/yubarajshrestha/ym/downloads)](https://packagist.org/packages/yubarajshrestha/ym)
+[![License](https://poser.pugx.org/yubarajshrestha/ym/license)](https://packagist.org/packages/yubarajshrestha/ym)
+
+**If you are sick trying to findout the controllers, routes and views from too many project files in laravel then yes, this package is for you.**
+
 > This helps you to organize your Laravel Project codes by modularizing all your controllers, views and models. This will be very helpful when your laravel project is very big.
 
 ### How to?
