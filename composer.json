@@ -13,8 +13,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "YubarajShrestha\\YM\\": "src/",
-            "YModules\\": "YModules/"
+            "YubarajShrestha\\YM\\": "src/"
         }
     },
     "minimum-stability": "stable",
