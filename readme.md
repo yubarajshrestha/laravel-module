@@ -1,5 +1,6 @@
 # Modularizing Laravel
 ====================
+[![GitHub stars](https://img.shields.io/github/stars/yubarajshrestha/laravel-module.svg)](https://github.com/yubarajshrestha/laravel-module/stargazers)
 [![Latest Stable Version](https://poser.pugx.org/yubarajshrestha/ym/v/stable)](https://packagist.org/packages/yubarajshrestha/ym)
 [![Total Downloads](https://poser.pugx.org/yubarajshrestha/ym/downloads)](https://packagist.org/packages/yubarajshrestha/ym)
 [![License](https://poser.pugx.org/yubarajshrestha/ym/license)](https://packagist.org/packages/yubarajshrestha/ym)
