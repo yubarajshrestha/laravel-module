@@ -19,10 +19,6 @@ class YMModuleProvider extends \Illuminate\Support\ServiceProvider
      */
     public function boot()
     {
-        // if(!File::exists(base_path().'/config/module.php')) {
-		// 	$string = File::get(__DIR__.'/Skeleton/module.php');
-        //     File::put(base_path().'/config/module.php', $string);
-		// }
         // For each of the registered modules, include their routes and Views
         $modules = config("module.modules");
         try {

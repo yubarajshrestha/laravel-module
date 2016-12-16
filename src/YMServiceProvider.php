@@ -2,8 +2,7 @@
 
 namespace YubarajShrestha\YM;
 
-use Illuminate\Support\ServiceProvider;
-use Carbon\Carbon;
+use Illuminate\Support\ServiceProvider
 use File;
 
 class YMServiceProvider extends ServiceProvider

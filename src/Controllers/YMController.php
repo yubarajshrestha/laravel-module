@@ -5,9 +5,8 @@ namespace YubarajShrestha\YM\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-use File, Redirect;
+use File;
 
-use Carbon\Carbon;
 use YubarajShrestha\YM\Http\Modularize;
 
 class YMController extends Controller
@@ -18,9 +17,6 @@ class YMController extends Controller
 	private $view = "../Skeleton/view.php";
 	private $modules = [];
 	private $module = null;
-	private $errors = false;
-	private $error_message = "";
-	private $setup = false;
 
 	public function index(Modularize $module) {
 		$modules = $module::all();
@@ -29,7 +25,6 @@ class YMController extends Controller
 
 	public function make(Request $request) {
 		$raw_modules = $request->get('modules');
-		$key = $request->get('_token');
 		$model = $this->getParts($raw_modules);
 		foreach($model as $m) {
 			$this->insertModule($m, new Modularize);
@@ -60,7 +55,6 @@ class YMController extends Controller
 		$string[0] .= "\n";
 		$string[1] = "    " . $string[1];
 		for($i = 0; $i < $count; $i++) {
-			//$item = $this->filter($local_modules[$i]);
 			$item = $local_modules[$i];
 			if($i != $count-1) {
 				$string[0] .= '        \''. trim($item) . "',\n";
@@ -79,7 +73,6 @@ class YMController extends Controller
 			$final_module = ucfirst($break_apart[0]) . ucfirst($break_apart[1]);
 		}
 
-		// $data = $module->whereSlug($final_module)->first();
 		$singular = $module->whereSlug(str_singular($final_module))->first();
 		$plural = $module->whereSlug(str_plural($final_module))->first();
 		if(count($singular) == count($plural) && count($singular) == 0) {
@@ -106,10 +99,6 @@ class YMController extends Controller
 
 		$data = explode(',', $raw_modules);
 		return $data;
-	}
-
-	private final function filter($string) {
-		return ucwords($string);
 	}
 
 	private final function fileWriter($path, $str) {
@@ -166,7 +155,6 @@ class YMController extends Controller
 		if(File::exists(__DIR__.'../'.$this->controller)) {
 			$string = File::get(__DIR__.'../'.$this->controller);
 			$this->fileWriter($path, $string);
-			//$this->fileWriter($path, $string);
 		}
 		return;
 	}
@@ -197,7 +185,6 @@ class YMController extends Controller
         foreach (scandir($dir) as $item) {
             if ($item == '.' || $item == '..') { continue; }
             if (!$this->destroyer($dir . "/" . $item, false)) {
-                //chmod($dir . "/" . $item, 0777);
                 if (!$this->destroyer($dir . "/" . $item, false)) return false;
             };
         }
