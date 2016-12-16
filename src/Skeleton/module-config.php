@@ -1,4 +1,5 @@
 <?php
+
 return [
-    'modules'=>array(""),
+    'modules'=> [''],
 ];
