@@ -1,6 +1,7 @@
 # Modularizing Laravel
 ====================
 [![Latest Stable Version](https://poser.pugx.org/yubarajshrestha/ym/v/stable)](https://packagist.org/packages/yubarajshrestha/ym)
+[![Build Status](https://travis-ci.org/yubarajshrestha/laravel-module.svg?branch=master)](https://travis-ci.org/yubarajshrestha/laravel-module)
 [![Total Downloads](https://poser.pugx.org/yubarajshrestha/ym/downloads)](https://packagist.org/packages/yubarajshrestha/ym)
 [![License](https://poser.pugx.org/yubarajshrestha/ym/license)](https://packagist.org/packages/yubarajshrestha/ym)
 
