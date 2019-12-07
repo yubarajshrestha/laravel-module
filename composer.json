@@ -13,7 +13,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "YubarajShrestha\\YM\\": "src/"
+            "YubarajShrestha\\YM\\": "src/",
         }
     },
     "extra": {

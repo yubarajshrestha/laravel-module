@@ -26,8 +26,8 @@ class YMServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ . '/Migrations');
 
         // define files which are going to be published
-        if(!File::isDirectory(base_path() . '/YModules'))
-            File::makeDirectory(base_path() . '/YModules');
+        if(!File::isDirectory(base_path() . '/modules'))
+            File::makeDirectory(base_path() . '/modules');
 
 		$this->publishes([
 			__DIR__ . '/Skeleton/module-config.php' => base_path('config/module.php'),

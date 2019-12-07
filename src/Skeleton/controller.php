@@ -1,10 +1,10 @@
 <?php
 
-namespace YModules\Test\Controllers;
+namespace Modules\Test\Controllers;
 
 use Illuminate\Routing\Controller;
 
-use YModules\Test\Models\Test;
+use Modules\Test\Models\Test;
 
 class TestController extends Controller {
 

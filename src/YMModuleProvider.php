@@ -2,6 +2,7 @@
 
 namespace YubarajShrestha\YM;
 use File;
+use Illuminate\Support\Str;
 /**
 * ModuleProvider
 *
@@ -22,19 +23,19 @@ class YMModuleProvider extends \Illuminate\Support\ServiceProvider
         // For each of the registered modules, include their routes and Views
         $modules = config("module.modules");
         try {
-            while (list(,$module) = each($modules)) {
+            foreach($modules as $module) {
                 // Load the routes for each of the modules
-                if(file_exists(base_path().'/YModules/'.str_singular($module).'/routes.php')) {
-                    include base_path().'/YModules/'.str_singular($module).'/routes.php';
+                if(file_exists(base_path().'/modules/'.Str::singular($module).'/routes.php')) {
+                    include base_path().'/modules/'.Str::singular($module).'/routes.php';
                 }
 
                 // Load the views
-                if(is_dir(base_path(). '/YModules/'.str_singular($module).'/Views')) {
-                    $this->loadViewsFrom(base_path(). '/YModules/'.str_singular($module).'/Views', strtolower(str_singular($module)));
+                if(is_dir(base_path(). '/modules/'.Str::singular($module).'/Views')) {
+                    $this->loadViewsFrom(base_path(). '/modules/'.Str::singular($module).'/Views', strtolower(Str::singular($module)));
                 }
             }
         } catch(\Exception $e) {
-            //
+            dd($e->getMessage());
         }
     }
     public function register() {}
