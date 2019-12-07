@@ -26,12 +26,12 @@ Add the service provider to `config/app.php`
 
 #### Step 3: Add PSR-4 Autoloader
 Add following line after **"App\\": "app/"** in `composer.json`
-	**"YModules\\": "YModules/"**
+	**"Modules\\": "Modules/"**
 
 	Example:
 	"psr-4": {
         "App\\": "app/",
-        "YModules\\": "YModules/"
+        "Modules\\": "Modules/"
     }
 #### Step 4: Publish Vendor Files
 You need to have some files and don't worry it's quite easy. You just want to execute the command now.
