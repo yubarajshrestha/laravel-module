@@ -16,6 +16,14 @@
             "YubarajShrestha\\YM\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "YubarajShrestha\\YM\\YMServiceProvider",
+                "YubarajShrestha\\YM\\YMModuleProvider"
+            ]
+        }
+    },
     "minimum-stability": "stable",
     "require": {}
 }

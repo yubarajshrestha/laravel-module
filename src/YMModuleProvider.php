@@ -23,7 +23,6 @@ class YMModuleProvider extends \Illuminate\Support\ServiceProvider
         $modules = config("module.modules");
         try {
             while (list(,$module) = each($modules)) {
-
                 // Load the routes for each of the modules
                 if(file_exists(base_path().'/YModules/'.str_singular($module).'/routes.php')) {
                     include base_path().'/YModules/'.str_singular($module).'/routes.php';
